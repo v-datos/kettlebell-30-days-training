@@ -529,12 +529,6 @@
             <label for="log-notes">${t("label_notes")}</label>
             <input type="text" id="log-notes" value="${escapeHtml(entry.notes)}" placeholder="${t("notes_placeholder")}">
           </div>
-
-          <div class="form-footer-actions">
-            <button type="submit" class="btn btn-primary">
-              ${t("btn_save")}
-            </button>
-          </div>
         </form>
       </section>
     `;
@@ -634,10 +628,30 @@
   }
 
   // --------------------------------------------------------------------------
-  // Formulario de Registro
+  // Formulario de Registro (Auto-guardado instantáneo)
   // --------------------------------------------------------------------------
   function setupLogFormEvents(dayData, currentEntry) {
     let selectedStatus = currentEntry.status || "Closed";
+
+    function autoSave(notify = false) {
+      const logs = loadLogs();
+      logs[String(dayData.day)] = {
+        status: selectedStatus,
+        real_minutes: document.getElementById("log-minutes")?.value.trim() || "24",
+        rpe: document.getElementById("log-rpe")?.value || "5",
+        symptoms: document.getElementById("log-symptoms")?.value || "no",
+        notes: document.getElementById("log-notes")?.value.trim() || "",
+      };
+      saveLogs(logs);
+      renderSummaryStrip();
+      renderDayCarousel();
+      if (notify) {
+        showToast(selectedStatus === "Closed"
+          ? (currentLang === "es" ? `✓ Día ${dayData.day} completado` : `✓ Day ${dayData.day} completed`)
+          : (currentLang === "es" ? "✓ Registro actualizado" : "✓ Log updated")
+        );
+      }
+    }
 
     document.querySelectorAll(".status-choice-btn").forEach((btn) => {
       btn.addEventListener("click", () => {
@@ -645,6 +659,7 @@
         selectedStatus = btn.getAttribute("data-status");
         btn.classList.add("selected");
         if (selectedStatus === "omitida") btn.classList.add("omit");
+        autoSave(true);
       });
     });
 
@@ -654,26 +669,12 @@
       rpeInput.addEventListener("input", () => {
         rpeDisplay.textContent = `${rpeInput.value}/10`;
       });
+      rpeInput.addEventListener("change", () => autoSave(false));
     }
 
-    const form = document.getElementById("workout-log-form");
-    if (form) {
-      form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        const logs = loadLogs();
-        logs[String(dayData.day)] = {
-          status: selectedStatus,
-          real_minutes: document.getElementById("log-minutes").value.trim(),
-          rpe: document.getElementById("log-rpe").value,
-          symptoms: document.getElementById("log-symptoms").value,
-          notes: document.getElementById("log-notes").value.trim(),
-        };
-        saveLogs(logs);
-        renderSummaryStrip();
-        renderDayCarousel();
-        showToast(t("toast_saved"));
-      });
-    }
+    document.getElementById("log-minutes")?.addEventListener("change", () => autoSave(false));
+    document.getElementById("log-symptoms")?.addEventListener("change", () => autoSave(false));
+    document.getElementById("log-notes")?.addEventListener("change", () => autoSave(false));
   }
 
   // --------------------------------------------------------------------------
