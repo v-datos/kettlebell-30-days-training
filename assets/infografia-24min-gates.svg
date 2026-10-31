@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" role="img" aria-labelledby="title-gates desc-gates">
+  <title id="title-gates">Estructura de la sesión de 24 minutos nominales y árbol de decisión de Gates de seguridad</title>
+  <desc id="desc-gates">Infografía original que muestra la distribución temporal de 24 minutos (3 min instrucción, 4 min calentamiento, 14 min bloque principal, 3 min vuelta a la calma) y los criterios del Gate de Carga de 30 lb y del Gate de Swing previo al Día 12.</desc>
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .panel { fill: #1e293b; stroke: #334155; stroke-width: 1.5; rx: 12; }
+      .panel-accent { fill: #172554; stroke: #3b82f6; stroke-width: 1.5; rx: 10; }
+      .panel-warn { fill: #3b1c0c; stroke: #f97316; stroke-width: 1.5; rx: 10; }
+      .panel-ok { fill: #052e16; stroke: #22c55e; stroke-width: 1.5; rx: 10; }
+      .h1 { font: 700 20px system-ui, -apple-system, sans-serif; fill: #f8fafc; }
+      .h2 { font: 700 15px system-ui, -apple-system, sans-serif; fill: #e2e8f0; }
+      .label { font: 600 13px system-ui, -apple-system, sans-serif; fill: #f8fafc; }
+      .body { font: 400 12px system-ui, -apple-system, sans-serif; fill: #cbd5e1; }
+      .small { font: 500 11px system-ui, -apple-system, sans-serif; fill: #94a3b8; }
+      .badge { font: 700 11px system-ui, -apple-system, sans-serif; fill: #0f172a; }
+    </style>
+  </defs>
+
+  <rect width="960" height="540" class="bg" rx="16"/>
+
+  <!-- Encabezado -->
+  <text x="32" y="38" class="h1">Arquitectura de la Sesión (24 min nominales) y Puntos de Control (Gates)</text>
+  <text x="32" y="58" class="small">Licencia CC0 / Dominio público · Elaboración propia para Kattle Bell Training (30 lb / 13,6 kg)</text>
+
+  <!-- Barra de tiempo de 24 min -->
+  <rect x="32" y="74" width="896" height="108" class="panel"/>
+  <text x="52" y="98" class="h2">1. Distribución de los 24 minutos nominales (no apresurar; si no cabe en 14 min, usar regresión)</text>
+
+  <!-- 3 min (12.5% = 106px) -->
+  <rect x="52" y="112" width="106" height="44" fill="#38bdf8" rx="6"/>
+  <text x="105" y="131" text-anchor="middle" class="badge">3 min (12,5%)</text>
+  <text x="105" y="147" text-anchor="middle" class="badge">Instrucción y Gate</text>
+
+  <!-- 4 min (16.7% = 142px) -->
+  <rect x="164" y="112" width="142" height="44" fill="#a855f7" rx="6"/>
+  <text x="235" y="131" text-anchor="middle" class="label">4 min (16,7%)</text>
+  <text x="235" y="147" text-anchor="middle" class="label">Calentamiento articular</text>
+
+  <!-- 14 min (58.3% = 490px) -->
+  <rect x="312" y="112" width="490" height="44" fill="#f97316" rx="6"/>
+  <text x="557" y="131" text-anchor="middle" class="badge">14 min (58,3%) — BLOQUE PRINCIPAL PRESCRITO</text>
+  <text x="557" y="147" text-anchor="middle" class="badge">Series + Transiciones (30 s) + Descansos (45–75 s) + Paseo/Movilidad restante</text>
+
+  <!-- 3 min (12.5% = 100px) -->
+  <rect x="808" y="112" width="100" height="44" fill="#22c55e" rx="6"/>
+  <text x="858" y="131" text-anchor="middle" class="badge">3 min (12,5%)</text>
+  <text x="858" y="147" text-anchor="middle" class="badge">Calma y Registro</text>
+
+  <text x="52" y="172" class="small">Nota: Los videos de demostración se consultan fuera del cronómetro. Ningún minuto del bloque de 14 min es espera arbitraria.</text>
+
+  <!-- Columna Izquierda: Gate de Carga 30 lb -->
+  <rect x="32" y="198" width="436" height="314" class="panel"/>
+  <text x="52" y="226" class="h2">2. Gate de Carga Diario (Kettlebell 30 lb / 13,6 kg)</text>
+  <text x="52" y="246" class="small">Obligatorio antes de series cargadas (D01, D02, D05, D06, D08, D10, D13, D15, D18, D21, D23, D24, D26, D28, D29)</text>
+
+  <rect x="52" y="260" width="396" height="96" class="panel-accent"/>
+  <text x="68" y="282" class="label">Prueba previa de 1 repetición controlada:</text>
+  <text x="68" y="302" class="body">• ¿Puedes colocar y retirar la pesa de 30 lb sin tirón lumbar ni giro brusco?</text>
+  <text x="68" y="320" class="body">• ¿La repetición sale fluida, sin temblor, valgo de rodilla ni arquear espalda?</text>
+  <text x="68" y="338" class="body">• ¿El esfuerzo percibido respeta el RPE objetivo (≤6–7) con ≥3 reps en reserva (RIR)?</text>
+
+  <!-- Flechas decisión -->
+  <line x1="150" y1="356" x2="150" y2="386" stroke="#22c55e" stroke-width="2.5"/>
+  <line x1="348" y1="356" x2="348" y2="386" stroke="#f97316" stroke-width="2.5"/>
+
+  <rect x="52" y="386" width="190" height="106" class="panel-ok"/>
+  <text x="147" y="408" text-anchor="middle" class="label" fill="#86efac">SÍ CUMPLE LOS 3 CRITERIOS</text>
+  <text x="64" y="428" class="body">• Ejecutar dosis con 30 lb.</text>
+  <text x="64" y="446" class="body">• Reevaluar en cada serie.</text>
+  <text x="64" y="464" class="body">• Parar si cambia velocidad</text>
+  <text x="64" y="480" class="body">  o aparece cualquier síntoma.</text>
+
+  <rect x="258" y="386" width="190" height="106" class="panel-warn"/>
+  <text x="353" y="408" text-anchor="middle" class="label" fill="#fdba74">FALLA ALGÚN CRITERIO</text>
+  <text x="270" y="428" class="body">• Omitir los 30 lb sin culpa.</text>
+  <text x="270" y="446" class="body">• Usar regresión oficial sin carga</text>
+  <text x="270" y="464" class="body">  (bisagra, silla, alcance, marcha)</text>
+  <text x="270" y="480" class="body">  o carga intermedia (8–10 kg).</text>
+
+  <!-- Columna Derecha: Gate de Swing D12 y D19 -->
+  <rect x="492" y="198" width="436" height="314" class="panel"/>
+  <text x="512" y="226" class="h2">3. Gate de Swing Balístico (Días 12 y 19)</text>
+  <text x="512" y="246" class="small">Debe estar aprobado, observado y registrado ANTES del Día 12 (no se evalúa dentro de D12)</text>
+
+  <rect x="512" y="260" width="396" height="96" class="panel-accent"/>
+  <text x="528" y="282" class="label">Requisitos acumulados (D01–D11 → D12 → D19):</text>
+  <text x="528" y="302" class="body">1. Bisagra disociada de rodilla (prueba de pica: contacto en cabeza, dorsal y sacro).</text>
+  <text x="528" y="320" class="body">2. Deadlift 3×6 con 30 lb completado a RPE ≤5 sin molestia lumbar ni pérdida de agarre.</text>
+  <text x="528" y="338" class="body">3. Para D19: ≥48 h tras D12 + dosis D12 tolerada sin agujetas anormales al día siguiente.</text>
+
+  <line x1="610" y1="356" x2="610" y2="386" stroke="#22c55e" stroke-width="2.5"/>
+  <line x1="808" y1="356" x2="808" y2="386" stroke="#f97316" stroke-width="2.5"/>
+
+  <rect x="512" y="386" width="190" height="106" class="panel-ok"/>
+  <text x="607" y="408" text-anchor="middle" class="label" fill="#86efac">GATE APROBADO Y CABE</text>
+  <text x="524" y="428" class="body">• D12: 3–5×5 swings (desc. ≥60 s)</text>
+  <text x="524" y="446" class="body">  a RPE ≤5, velocidad constante.</text>
+  <text x="524" y="464" class="body">• D19: repetir D12 o +1 serie</text>
+  <text x="524" y="480" class="body">  (máx. 6×5). Nunca con press/carry.</text>
+
+  <rect x="718" y="386" width="190" height="106" class="panel-warn"/>
+  <text x="813" y="408" text-anchor="middle" class="label" fill="#fdba74">NO APROBADO / NO CABE</text>
+  <text x="730" y="428" class="body">• D12: 3×6 deadlift controlado</text>
+  <text x="730" y="446" class="body">  o 3×6 bisagra sin carga.</text>
+  <text x="730" y="464" class="body">• D19: SOLO 3×5 bisagra lenta</text>
+  <text x="730" y="480" class="body">  SIN CARGA (pausa 45 s; 0 lb).</text>
+</svg>

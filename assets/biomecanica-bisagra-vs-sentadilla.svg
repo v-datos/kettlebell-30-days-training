@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 500" role="img" aria-labelledby="title-hinge desc-hinge">
+  <title id="title-hinge">Comparativa biomecánica: Bisagra de cadera (Deadlift y Swing) frente a Sentadilla (Goblet y Silla)</title>
+  <desc id="desc-hinge">Ilustración vectorial que contrasta el patrón de bisagra de cadera (desplazamiento horizontal de cadera hacia atrás y tibia casi vertical) con el patrón de sentadilla (flexión simultánea de cadera y rodilla y torso más erguido).</desc>
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .card { fill: #1e293b; stroke: #334155; stroke-width: 1.5; rx: 12; }
+      .h1 { font: 700 20px system-ui, -apple-system, sans-serif; fill: #f8fafc; }
+      .h2 { font: 700 16px system-ui, -apple-system, sans-serif; fill: #38bdf8; }
+      .h2-alt { font: 700 16px system-ui, -apple-system, sans-serif; fill: #fb923c; }
+      .body { font: 400 12.5px system-ui, -apple-system, sans-serif; fill: #e2e8f0; }
+      .small { font: 500 11px system-ui, -apple-system, sans-serif; fill: #94a3b8; }
+      .bone { stroke: #f8fafc; stroke-width: 6; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .guide { stroke: #22c55e; stroke-width: 2.5; stroke-dasharray: 6 4; fill: none; }
+      .vector { stroke: #f97316; stroke-width: 3; fill: none; }
+      .joint { fill: #38bdf8; stroke: #0f172a; stroke-width: 2; }
+      .kb { fill: #f97316; stroke: #fed7aa; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="960" height="500" class="bg" rx="16"/>
+  <text x="32" y="38" class="h1">Biomecánica Clave: ¿Bisagra de Cadera o Sentadilla?</text>
+  <text x="32" y="58" class="small">Regla fundamental de StrongFirst y ACE Fitness: el Deadlift y el Swing son bisagras horizontales, no sentadillas verticales.</text>
+
+  <!-- Panel Izquierdo: Bisagra de Cadera -->
+  <rect x="32" y="76" width="436" height="396" class="card"/>
+  <text x="52" y="106" class="h2">A. Bisagra de Cadera (Deadlift / Swing / Bisagra sin carga)</text>
+  <text x="52" y="126" class="small">Días 1, 4, 12, 17, 19 y 28 · Dominante de cadera (glúteos e isquiosurales)</text>
+
+  <!-- Suelo -->
+  <line x1="60" y1="330" x2="250" y2="330" stroke="#475569" stroke-width="3"/>
+  <!-- Pica / alineación neutra (cabeza, dorsal, sacro) -->
+  <line x1="82" y1="228" x2="195" y2="148" class="guide"/>
+  <!-- Cuerpo en bisagra: tobillo (155,322), rodilla (162,270), cadera (95,225), hombro (185,165), cabeza (205,150) -->
+  <polyline points="155,322 162,270 95,225 185,165" class="bone"/>
+  <!-- Brazo vertical hacia la pesa entre tobillos -->
+  <polyline points="185,165 162,245 155,295" stroke="#94a3b8" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <circle cx="205" cy="150" r="14" fill="#e2e8f0"/>
+  <!-- Articulaciones -->
+  <circle cx="155" cy="322" r="5" class="joint"/>
+  <circle cx="162" cy="270" r="6" class="joint"/>
+  <circle cx="95" cy="225" r="7" class="joint"/>
+  <circle cx="185" cy="165" r="6" class="joint"/>
+  <!-- Kettlebell entre tobillos -->
+  <circle cx="155" cy="314" r="13" class="kb"/>
+  <path d="M147,302 Q155,290 163,302" stroke="#fed7aa" stroke-width="3" fill="none"/>
+  <!-- Vector horizontal de cadera -->
+  <line x1="125" y1="225" x2="62" y2="225" class="vector"/>
+  <polygon points="62,225 72,219 72,231" fill="#f97316"/>
+  <text x="60" y="212" class="small" fill="#fdba74">Cadera atrás</text>
+  <text x="172" y="298" class="small" fill="#86efac">Tibia ~vertical</text>
+
+  <!-- Puntos clave Bisagra -->
+  <text x="255" y="162" class="body">• Cadera viaja hacia atrás</text>
+  <text x="255" y="180" class="body">  (como cerrar puerta con glúteos).</text>
+  <text x="255" y="204" class="body">• Tibias casi verticales</text>
+  <text x="255" y="222" class="body">  (flexión de rodilla de ~15–20°).</text>
+  <text x="255" y="246" class="body">• Columna neutra (3 puntos</text>
+  <text x="255" y="264" class="body">  alineados: cráneo, dorsal, sacro).</text>
+  <text x="255" y="288" class="body">• Pesa entre los tobillos</text>
+  <text x="255" y="306" class="body">  (no adelantada frente a los dedos).</text>
+
+  <rect x="52" y="348" width="396" height="104" fill="#0f172a" rx="8" stroke="#334155"/>
+  <text x="66" y="370" class="small" fill="#38bdf8">SEÑALES DE CORRECCIÓN Y RESPIRACIÓN:</text>
+  <text x="66" y="390" class="body">• Inhalar por la nariz al llevar cadera atrás (llenando abdomen 360°).</text>
+  <text x="66" y="410" class="body">• "Romper el asa" y conectar dorsales (hombros lejos de las orejas).</text>
+  <text x="66" y="430" class="body">• Empujar el suelo con los pies y exhalar al bloquear glúteos arriba.</text>
+
+  <!-- Panel Derecho: Sentadilla -->
+  <rect x="492" y="76" width="436" height="396" class="card"/>
+  <text x="512" y="106" class="h2-alt">B. Sentadilla (Goblet Squat / Sentadilla a Silla)</text>
+  <text x="512" y="126" class="small">Días 2, 6, 8, 17, 18, 23 y 29 · Dominante de rodilla y cadera equilibrada</text>
+
+  <!-- Suelo y silla de referencia -->
+  <line x1="520" y1="330" x2="710" y2="330" stroke="#475569" stroke-width="3"/>
+  <!-- Silla punteada detrás -->
+  <polyline points="545,330 545,268 585,268 585,330" stroke="#64748b" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+  <line x1="545" y1="268" x2="545" y2="215" stroke="#64748b" stroke-width="2.5" stroke-dasharray="4 3"/>
+  <!-- Cuerpo en sentadilla: tobillo (615,322), rodilla (652,265), cadera (575,265), hombro (618,175), cabeza (626,154) -->
+  <polyline points="615,322 652,265 575,265 618,175" class="bone"/>
+  <!-- Brazo sosteniendo KB en pecho (Goblet) -->
+  <polyline points="618,175 636,222 645,192" stroke="#94a3b8" stroke-width="4.5" stroke-linecap="round" fill="none"/>
+  <circle cx="626" cy="154" r="14" fill="#e2e8f0"/>
+  <!-- Kettlebell frente al esternón -->
+  <circle cx="648" cy="188" r="12" class="kb"/>
+  <!-- Articulaciones -->
+  <circle cx="615" cy="322" r="5" class="joint"/>
+  <circle cx="652" cy="265" r="6" class="joint"/>
+  <circle cx="575" cy="265" r="7" class="joint"/>
+  <circle cx="618" cy="175" r="6" class="joint"/>
+  <!-- Vector vertical -->
+  <line x1="575" y1="230" x2="575" y2="305" stroke="#22c55e" stroke-width="3"/>
+  <polygon points="575,305 569,295 581,295" fill="#22c55e"/>
+  <text x="522" y="205" class="small" fill="#86efac">Bajada vertical</text>
+
+  <!-- Puntos clave Sentadilla -->
+  <text x="715" y="162" class="body">• Caderas y rodillas flexionan</text>
+  <text x="715" y="180" class="body">  a la vez ("sentarse entre talones").</text>
+  <text x="715" y="204" class="body">• Torso e inclinación tibial</text>
+  <text x="715" y="222" class="body">  paralelos entre sí.</text>
+  <text x="715" y="246" class="body">• Pesa pegada al esternón por</text>
+  <text x="715" y="264" class="body">  los cuernos; codos hacia abajo.</text>
+  <text x="715" y="288" class="body">• Rodillas siguen la línea media</text>
+  <text x="715" y="306" class="body">  del pie sin colapsar hacia dentro.</text>
+
+  <rect x="512" y="348" width="396" height="104" fill="#0f172a" rx="8" stroke="#334155"/>
+  <text x="526" y="370" class="small" fill="#fb923c">SEÑALES DE CORRECCIÓN Y RESPIRACIÓN:</text>
+  <text x="526" y="390" class="body">• Trípode plantar firme (talón, base del 1.º y 5.º metatarsiano).</text>
+  <text x="526" y="410" class="body">• En silla (regresión): tocar suavemente el asiento sin desplomarse.</text>
+  <text x="526" y="430" class="body">• Inhalar al bajar en 2–3 s; exhalar superando el punto medio al subir.</text>
+</svg>

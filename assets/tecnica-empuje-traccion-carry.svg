@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" role="img" aria-labelledby="title-prc desc-prc">
+  <title id="title-prc">Claves técnicas de Fuerza A y Fuerza B: Remo con apoyo, Press de suelo a 45 grados y Suitcase Carry</title>
+  <desc id="desc-prc">Ilustración original en tres paneles con la geometría segura del Remo apoyado (tracción al bolsillo), Press de suelo con kettlebell (ángulo humeral de 45 grados y carga fetal) y Suitcase Carry (estabilidad anti-inclinación lateral).</desc>
+  <defs>
+    <style>
+      .bg { fill: #0f172a; }
+      .card { fill: #1e293b; stroke: #334155; stroke-width: 1.5; rx: 12; }
+      .h1 { font: 700 20px system-ui, -apple-system, sans-serif; fill: #f8fafc; }
+      .h2 { font: 700 15px system-ui, -apple-system, sans-serif; fill: #38bdf8; }
+      .body { font: 400 12px system-ui, -apple-system, sans-serif; fill: #e2e8f0; }
+      .small { font: 500 11px system-ui, -apple-system, sans-serif; fill: #94a3b8; }
+      .bone { stroke: #f8fafc; stroke-width: 5.5; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .kb { fill: #f97316; stroke: #fed7aa; stroke-width: 2; }
+    </style>
+  </defs>
+
+  <rect width="960" height="480" class="bg" rx="16"/>
+  <text x="32" y="38" class="h1">Geometría Segura en Tracción (Remo), Empuje (Floor Press) y Transporte (Carry)</text>
+  <text x="32" y="58" class="small">Tres ajustes técnicos que protegen el hombro y la columna lumbar al trabajar con una kettlebell única de 30 lb (13,6 kg).</text>
+
+  <!-- Panel 1: Remo Apoyado -->
+  <rect x="32" y="76" width="286" height="376" class="card"/>
+  <text x="48" y="104" class="h2">1. Remo con Apoyo (Arco en J)</text>
+  <text x="48" y="122" class="small">Fuerza A y Técnica (D02, D06, D08, D18, D23, D29)</text>
+
+  <!-- Banco y figura en remo -->
+  <line x1="52" y1="265" x2="296" y2="265" stroke="#475569" stroke-width="3"/>
+  <rect x="205" y="220" width="68" height="45" fill="#334155" rx="4"/>
+  <!-- Pierna atras, torso horizontal, mano en banco -->
+  <polyline points="85,260 112,218 118,175 212,175 225,220" class="bone"/>
+  <circle cx="232" cy="170" r="11" fill="#e2e8f0"/>
+  <!-- Brazo que rema hacia la cadera -->
+  <polyline points="195,175 155,155 148,195" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" fill="none"/>
+  <circle cx="148" cy="208" r="11" class="kb"/>
+  <!-- Curva J de tracción -->
+  <path d="M192,235 Q162,230 148,200" stroke="#22c55e" stroke-width="2.5" stroke-dasharray="4 3" fill="none"/>
+  <text x="128" y="252" class="small" fill="#86efac">Tracción hacia el bolsillo</text>
+
+  <text x="48" y="294" class="body">• Apoyar mano libre en banco o silla</text>
+  <text x="48" y="312" class="body">  firme; espalda plana y pelvis cuadrada.</text>
+  <text x="48" y="334" class="body">• Tirar del codo hacia la cadera (arco</text>
+  <text x="48" y="352" class="body">  en "J"), NO hacia el cuello/oreja.</text>
+  <text x="48" y="374" class="body">• Pausa de 1 s arriba sin rotar el</text>
+  <text x="48" y="392" class="body">  tronco; descenso controlado en 2 s.</text>
+  <text x="48" y="416" class="small" fill="#fdba74">Regresión: Retracción escapular sin peso.</text>
+
+  <!-- Panel 2: Press de Suelo a 45 grados -->
+  <rect x="337" y="76" width="286" height="376" class="card"/>
+  <text x="353" y="104" class="h2">2. Press de Suelo (Codo a ~45°)</text>
+  <text x="353" y="122" class="small">Fuerza B (D05, D10, D13*, D15, D21, D24*, D26)</text>
+
+  <!-- Vista superior torso en suelo -->
+  <rect x="445" y="152" width="70" height="96" fill="#334155" rx="16"/>
+  <circle cx="480" cy="136" r="13" fill="#e2e8f0"/>
+  <!-- Brazo incorrecto a 90 grados (tachado) -->
+  <line x1="515" y1="172" x2="578" y2="172" stroke="#ef4444" stroke-width="4" stroke-dasharray="4 3"/>
+  <text x="530" y="164" class="small" fill="#f87171">90° (Evitar)</text>
+  <!-- Brazo correcto a 45 grados -->
+  <line x1="515" y1="175" x2="562" y2="220" stroke="#22c55e" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="566" cy="224" r="11" class="kb"/>
+  <text x="524" y="252" class="small" fill="#86efac">Ángulo seguro ~45°</text>
+
+  <text x="353" y="294" class="body">• Cargar y descargar SIEMPRE en</text>
+  <text x="353" y="312" class="body">  posición fetal con AMBAS manos.</text>
+  <text x="353" y="334" class="body">• Codo a ~45° del costado; tocar el</text>
+  <text x="353" y="352" class="body">  suelo suavemente sin rebotar.</text>
+  <text x="353" y="374" class="body">• Muñeca recta (nudillos al techo);</text>
+  <text x="353" y="392" class="body">  campana apoyada en el antebrazo.</text>
+  <text x="353" y="416" class="small" fill="#fdba74">Regresión: Press a 2 manos o alcance 0 lb.</text>
+
+  <!-- Panel 3: Suitcase Carry -->
+  <rect x="642" y="76" width="286" height="376" class="card"/>
+  <text x="658" y="104" class="h2">3. Suitcase Carry / Hold</text>
+  <text x="658" y="122" class="small">Anti-inclinación lateral (20–30 s por lado)</text>
+
+  <!-- Eje vertical central -->
+  <line x1="785" y1="130" x2="785" y2="268" stroke="#22c55e" stroke-width="2" stroke-dasharray="5 4"/>
+  <line x1="700" y1="265" x2="870" y2="265" stroke="#475569" stroke-width="3"/>
+  <!-- Figura erguida frontal -->
+  <circle cx="785" cy="146" r="11" fill="#e2e8f0"/>
+  <!-- Hombros y pelvis nivelados -->
+  <line x1="755" y1="168" x2="815" y2="168" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <line x1="765" y1="212" x2="805" y2="212" stroke="#38bdf8" stroke-width="4" stroke-linecap="round"/>
+  <!-- Tronco y piernas -->
+  <line x1="785" y1="158" x2="785" y2="212" class="bone"/>
+  <line x1="772" y1="212" x2="770" y2="262" class="bone"/>
+  <line x1="798" y1="212" x2="800" y2="262" class="bone"/>
+  <!-- Brazos -->
+  <line x1="755" y1="168" x2="742" y2="208" stroke="#94a3b8" stroke-width="4" stroke-linecap="round"/>
+  <line x1="815" y1="168" x2="822" y2="216" stroke="#f8fafc" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="824" cy="230" r="11" class="kb"/>
+
+  <text x="658" y="294" class="body">• Imaginar que llevas dos maletas</text>
+  <text x="658" y="312" class="body">  idénticas: hombros y pelvis a nivel.</text>
+  <text x="658" y="334" class="body">• Separar la pesa ~2–3 cm del muslo</text>
+  <text x="658" y="352" class="body">  sin apoyarla contra la pierna.</text>
+  <text x="658" y="374" class="body">• Respiración costal corta manteniendo</text>
+  <text x="658" y="392" class="body">  faja abdominal activa ("escudo").</text>
+  <text x="658" y="416" class="small" fill="#fdba74">Regresión: Omitir pesa → marcha suave 60 s.</text>
+</svg>

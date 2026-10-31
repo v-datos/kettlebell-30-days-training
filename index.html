@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="color-scheme" content="light dark">
+  <title>Kettlebell 30 lb · 30-Day Training Program</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-workout" class="skip-link visually-hidden">Skip to workout</a>
+
+  <!-- TOP HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand-block">
+        <h1 id="app-title">Kettlebell 30 lb · Programa de 30 Días</h1>
+        <p class="brand-subtitle" id="app-subtitle">Guía de entrenamiento auto-gestionada para fuerza y movilidad</p>
+      </div>
+
+      <div class="header-actions">
+        <!-- SELECTOR DE IDIOMA ARRIBA A LA DERECHA -->
+        <button type="button" class="btn btn-lang" id="lang-toggle-btn" aria-label="Cambiar idioma / Switch language" title="Cambiar idioma / Switch language">
+          🌐 <span id="lang-label">English</span>
+        </button>
+
+        <button type="button" class="btn btn-secondary btn-sm" id="open-gates-btn" aria-haspopup="dialog">
+          <span id="btn-gates-text">🛡️ Gates de Seguridad</span>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm" id="open-info-btn" aria-haspopup="dialog">
+          <span id="btn-guide-text">📖 Manual y Fuentes</span>
+        </button>
+        <button type="button" class="btn btn-secondary btn-sm" id="export-progress-btn" title="Descargar copia de seguridad / Download backup">
+          <span id="btn-export-text">💾 Exportar</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- RESUMEN DE PROGRESO -->
+  <section class="summary-strip" aria-label="Progreso">
+    <div class="summary-inner">
+      <div class="summary-stat">
+        <span class="stat-badge" id="summary-badge">0 / 30</span>
+        <span id="summary-text">0 sesiones completadas</span>
+      </div>
+      <div class="summary-progress-wrapper">
+        <label for="cycle-progress" class="visually-hidden">Progreso del ciclo de 30 días</label>
+        <progress id="cycle-progress" max="30" value="0">0%</progress>
+      </div>
+    </div>
+  </section>
+
+  <!-- SELECTOR DE DÍAS (CARRUSEL RESPONSIVE TÁCTIL D01 - D30) -->
+  <nav class="day-carousel-nav" aria-label="Seleccionar día / Select Day">
+    <div class="day-carousel" id="day-carousel" role="tablist">
+      <!-- Generado dinámicamente: D01 al D30 sin fechas fijas -->
+    </div>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL: LA SESIÓN DEL DÍA -->
+  <main class="app-main" id="main-workout" tabindex="-1">
+    <div class="workout-container" id="workout-container" aria-live="polite">
+      <!-- Se renderiza dinámicamente -->
+    </div>
+  </main>
+
+  <!-- MODAL DE DEMOSTRACIÓN TÉCNICA Y VIDEO (DIALOG NATIVO) -->
+  <dialog id="exercise-dialog" closedby="any" aria-labelledby="exercise-dialog-title">
+    <div class="dialog-header">
+      <div>
+        <h2 id="exercise-dialog-title">Técnica de Ejercicio</h2>
+        <p class="dialog-subtitle" id="exercise-dialog-pattern"></p>
+      </div>
+      <button type="button" class="btn-close" id="close-exercise-dialog-btn" aria-label="Cerrar / Close">✕</button>
+    </div>
+    <div class="dialog-body" id="exercise-dialog-body">
+      <!-- Video embebido, ilustración SVG e instrucciones detalladas -->
+    </div>
+  </dialog>
+
+  <!-- MODAL DE GATES DE SEGURIDAD (DIALOG NATIVO) -->
+  <dialog id="gate-dialog" closedby="any" aria-labelledby="gate-dialog-title">
+    <div class="dialog-header">
+      <div>
+        <h2 id="gate-dialog-title">🛡️ Gates de Seguridad</h2>
+        <p class="dialog-subtitle" id="gate-dialog-subtitle">Verificación previa para levantar 30 lb o realizar Swings</p>
+      </div>
+      <button type="button" class="btn-close" id="close-gate-dialog-btn" aria-label="Cerrar / Close">✕</button>
+    </div>
+    <div class="dialog-body">
+      <form method="dialog" id="gate-form">
+        <section class="gate-block">
+          <h3 id="load-gate-title">1. Gate de Carga Diario (Kettlebell 30 lb / 13,6 kg)</h3>
+          <p class="brand-subtitle" id="load-gate-desc">Si falla algún punto, realiza la alternativa sin peso prescrita.</p>
+          <div class="checklist-group" id="load-gate-checklist"></div>
+        </section>
+
+        <section class="gate-block" style="margin-top: 1.5rem;">
+          <h3 id="swing-gate-title">2. Gate Completo para Swing (Obligatorio antes del Día 12)</h3>
+          <p class="brand-subtitle" id="swing-gate-desc">Prerrequisito obligatorio antes de la primera serie balística.</p>
+          <div class="checklist-group" id="swing-gate-checklist"></div>
+        </section>
+
+        <div class="dialog-actions">
+          <button type="submit" value="close" class="btn btn-primary" id="gate-save-btn">Guardar y Cerrar</button>
+        </div>
+      </form>
+    </div>
+  </dialog>
+
+  <!-- MODAL DE INFORMACIÓN TÉCNICA Y FUENTES (DIALOG NATIVO) -->
+  <dialog id="info-dialog" closedby="any" aria-labelledby="info-dialog-title">
+    <div class="dialog-header">
+      <div>
+        <h2 id="info-dialog-title">📖 Manual y Fuentes</h2>
+        <p class="dialog-subtitle" id="info-dialog-subtitle">Estructura del programa y demostraciones verificadas</p>
+      </div>
+      <button type="button" class="btn-close" id="close-info-dialog-btn" aria-label="Cerrar / Close">✕</button>
+    </div>
+    <div class="dialog-body">
+      <div class="info-tabs" role="tablist">
+        <button type="button" class="btn btn-sm info-tab-btn active" data-tab="tab-overview" id="tab-overview-btn">Visión General</button>
+        <button type="button" class="btn btn-sm info-tab-btn" data-tab="tab-table" id="tab-table-btn">Tabla 30 Días</button>
+        <button type="button" class="btn btn-sm info-tab-btn" data-tab="tab-sources" id="tab-sources-btn">Fuentes</button>
+      </div>
+
+      <div class="info-tab-pane active" id="tab-overview">
+        <div id="overview-content">
+          <!-- Contenido bilingüe dinámico -->
+        </div>
+      </div>
+
+      <div class="info-tab-pane" id="tab-table" hidden>
+        <div tabindex="0" role="region" aria-label="Tabla de 30 sesiones" class="table-wrapper">
+          <table class="comparison-table">
+            <thead>
+              <tr>
+                <th scope="col" id="col-day">Día</th>
+                <th scope="col" id="col-prescription">Prescripción</th>
+                <th scope="col" id="col-rpe">RPE</th>
+              </tr>
+            </thead>
+            <tbody id="comparison-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="info-tab-pane" id="tab-sources" hidden>
+        <div id="sources-list" class="sources-mini-list"></div>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- TOAST DE NOTIFICACIÓN SILENCIOSA -->
+  <div id="toast-msg" class="toast" role="status" aria-live="polite"></div>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="site-footer">
+    <p id="footer-text">
+      Kettlebell 30 lb (13,6 kg) · Programa de 30 Días · Tus registros se guardan en este dispositivo.
+    </p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
