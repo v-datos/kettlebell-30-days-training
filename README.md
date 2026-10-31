@@ -1,6 +1,10 @@
 # Kettlebell 30-Day Training Program 🏋️‍♂️
 ### Programa de Entrenamiento Kettlebell 30 Días (30 lb / 14 kg)
 
+<p align="center">
+  <img src="readme_banner.png" alt="Kettlebell 30-Day Training Program — 30 Días // 30 lb // Técnica y Progresión" width="100%" />
+</p>
+
 [**🌐 Live Web App / Aplicación Web en Vivo**](https://v-datos.github.io/kettlebell-30-days-training/)
 
 Una aplicación web interactiva, moderna y bilingüe (Español / English) para seguir un programa estructurado de entrenamiento con kettlebell de 30 sesiones a tu propio ritmo. Diseñada para funcionar perfectamente en dispositivos móviles y de escritorio.

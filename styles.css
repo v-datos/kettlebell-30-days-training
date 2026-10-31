@@ -146,6 +146,32 @@ body {
   gap: 0.5rem;
 }
 
+/* Header Hero Banner */
+.header-banner-container {
+  max-width: 1100px;
+  margin: 0.85rem auto 0.2rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.25);
+  background: #070d18;
+}
+
+.header-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 1672 / 941;
+  object-fit: cover;
+}
+
+@media (max-width: 640px) {
+  .header-banner-container {
+    margin-top: 0.65rem;
+    border-radius: 0.5rem;
+  }
+}
+
 /* Buttons */
 .btn {
   display: inline-flex;
