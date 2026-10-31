@@ -56,12 +56,18 @@
     </div>
   </section>
 
-  <!-- SELECTOR DE DÍAS (CARRUSEL RESPONSIVE TÁCTIL D01 - D30) -->
-  <nav class="day-carousel-nav" aria-label="Seleccionar día / Select Day">
-    <div class="day-carousel" id="day-carousel" role="tablist">
-      <!-- Generado dinámicamente: D01 al D30 sin fechas fijas -->
+  <!-- SELECTOR DE DÍAS (GRID TIPO CALENDARIO D01 - D30) -->
+  <section class="day-grid-section" aria-label="Calendario de sesiones / Session calendar">
+    <div class="day-grid-container">
+      <div class="day-grid-header">
+        <h2 class="day-grid-title" id="day-grid-title">Calendario de 30 Días</h2>
+        <span class="day-grid-hint" id="day-grid-hint">Toca un día para abrir su sesión</span>
+      </div>
+      <div class="day-grid" id="day-carousel" role="tablist">
+        <!-- Generado dinámicamente: 30 casillas tipo calendario -->
+      </div>
     </div>
-  </nav>
+  </section>
 
   <!-- CONTENIDO PRINCIPAL: LA SESIÓN DEL DÍA -->
   <main class="app-main" id="main-workout" tabindex="-1">

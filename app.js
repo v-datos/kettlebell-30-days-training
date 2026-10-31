@@ -175,6 +175,10 @@
         ? "Descargar copia de seguridad del progreso"
         : "Download progress backup";
     }
+    const gridTitle = document.getElementById("day-grid-title");
+    const gridHint = document.getElementById("day-grid-hint");
+    if (gridTitle) gridTitle.textContent = t("day_grid_title");
+    if (gridHint) gridHint.textContent = t("day_grid_hint");
     document.getElementById("footer-text").textContent = t("footer_text");
 
     // Modal de Gates
@@ -257,7 +261,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // Carrusel de Días (D01 a D30, sin fechas fijas)
+  // Selector de Días (Grid Tipo Calendario D01 a D30)
   // --------------------------------------------------------------------------
   function renderDayCarousel() {
     const carousel = document.getElementById("day-carousel");
@@ -270,34 +274,32 @@
       const entry = logs[String(d.day)] || {};
       const isClosed = entry.status === "Closed";
       const isSelected = d.day === currentDay;
+      const isGateDay = d.day === 12 || d.day === 19;
 
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = `day-pill ${isClosed ? "completed" : ""}`;
       btn.setAttribute("role", "tab");
       btn.setAttribute("aria-selected", isSelected ? "true" : "false");
-      btn.setAttribute("aria-label", `${t("day_prefix")} ${d.day}`);
+      btn.setAttribute("aria-label", `${t("day_prefix")} ${d.day}${isClosed ? ` (${t("completed_tag")})` : ""}`);
       btn.dataset.day = d.day;
 
       btn.innerHTML = `
         <span class="day-pill-num">${t("pill_prefix")}${String(d.day).padStart(2, "0")}</span>
-        <span class="day-pill-status">${isClosed ? t("completed_tag") : ""}</span>
+        <div class="day-pill-indicators">
+          ${isClosed ? '<span class="day-pill-check" aria-hidden="true">✓</span>' : ""}
+          ${isGateDay ? '<span class="day-pill-gate" title="Gate de Seguridad" aria-hidden="true">🛡️</span>' : ""}
+        </div>
       `;
 
       btn.addEventListener("click", () => {
         currentDay = d.day;
         renderDayCarousel();
         renderWorkout();
-        btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
+        document.getElementById("main-workout")?.scrollIntoView({ behavior: "smooth", block: "start" });
       });
 
       carousel.appendChild(btn);
-
-      if (isSelected) {
-        setTimeout(() => {
-          btn.scrollIntoView({ behavior: "smooth", block: "nearest", inline: "center" });
-        }, 80);
-      }
     });
   }
 
