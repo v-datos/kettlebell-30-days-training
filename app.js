@@ -11,11 +11,14 @@
 
   const STORAGE_KEY_LOGS = "kb30_public_logs_v1";
   const STORAGE_KEY_GATES = "kb30_public_gates_v1";
-  const STORAGE_KEY_LANG = "kb30_public_lang_v1";
+  const STORAGE_KEY_LANG = "kb30_public_lang_v2";
 
-  // Idioma actual (detección navegador o guardado en localStorage)
-  let currentLang = localStorage.getItem(STORAGE_KEY_LANG) ||
-    (navigator.language && navigator.language.startsWith("en") ? "en" : "es");
+  // Idioma actual: Default SIEMPRE "es" (Español).
+  // Solo usa "en" si el usuario explícitamente cambió el idioma usando el botón en esta versión.
+  let currentLang = localStorage.getItem(STORAGE_KEY_LANG) || "es";
+  if (currentLang !== "en" && currentLang !== "es") {
+    currentLang = "es";
+  }
 
   // Estado del entrenamiento
   let currentDay = getInitialDay();
@@ -141,11 +144,20 @@
   // --------------------------------------------------------------------------
   function applyLanguage() {
     document.documentElement.lang = currentLang;
+    document.title = currentLang === "es"
+      ? "Kettlebell 30 lb · Programa de 30 Días"
+      : "30-Day Kettlebell Program (30 lb / 14 kg)";
 
-    // Botón toggle de idioma
+    // Botón toggle de idioma (ofrece cambiar al otro idioma)
     const langLabel = document.getElementById("lang-label");
+    const langBtn = document.getElementById("lang-toggle-btn");
     if (langLabel) {
       langLabel.textContent = currentLang === "es" ? "English" : "Español";
+    }
+    if (langBtn) {
+      const hint = currentLang === "es" ? "Switch to English" : "Cambiar a Español";
+      langBtn.setAttribute("aria-label", hint);
+      langBtn.setAttribute("title", hint);
     }
 
     // Cabecera y botones fijos
@@ -154,9 +166,15 @@
     if (appTitle) appTitle.textContent = t("title");
     if (appSubtitle) appSubtitle.textContent = t("subtitle");
 
-    document.getElementById("btn-gates-text").textContent = t("btn_gates");
     document.getElementById("btn-guide-text").textContent = t("btn_guide");
+    document.getElementById("btn-gates-text").textContent = t("btn_gates");
     document.getElementById("btn-export-text").textContent = t("btn_export");
+    const exportBtn = document.getElementById("export-progress-btn");
+    if (exportBtn) {
+      exportBtn.title = currentLang === "es"
+        ? "Descargar copia de seguridad del progreso"
+        : "Download progress backup";
+    }
     document.getElementById("footer-text").textContent = t("footer_text");
 
     // Modal de Gates

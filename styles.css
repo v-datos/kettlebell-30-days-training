@@ -217,22 +217,38 @@ body {
   border-radius: 50%;
 }
 
-/* Language Toggle Button */
+/* Botón destacado / orientativo (Manual & Fuentes) */
+.btn-highlight {
+  background: var(--brand);
+  color: #ffffff;
+  border: 1px solid var(--brand);
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(234, 88, 12, 0.35);
+}
+
+.btn-highlight:hover {
+  opacity: 0.93;
+  box-shadow: 0 4px 14px rgba(234, 88, 12, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Language Toggle Button (selector discreto al final) */
 .btn-lang {
-  background: var(--surface);
-  border: 2px solid var(--brand);
-  color: var(--brand);
-  font-weight: 800;
-  padding: 0.35rem 0.8rem;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  padding: 0.3rem 0.75rem;
   border-radius: 999px;
-  min-height: 36px;
-  font-size: 0.85rem;
-  box-shadow: 0 2px 6px rgba(234, 88, 12, 0.15);
+  min-height: 34px;
+  font-size: 0.82rem;
+  box-shadow: none;
 }
 
 .btn-lang:hover {
-  background: var(--brand);
-  color: #ffffff;
+  background: var(--surface);
+  border-color: var(--brand);
+  color: var(--brand);
 }
 
 /* Progress strip */
@@ -1009,7 +1025,10 @@ dialog::backdrop {
 
   .header-actions {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    justify-content: flex-start;
   }
 
   .session-hero-card {

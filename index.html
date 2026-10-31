@@ -19,19 +19,24 @@
       </div>
 
       <div class="header-actions">
-        <!-- SELECTOR DE IDIOMA ARRIBA A LA DERECHA -->
-        <button type="button" class="btn btn-lang" id="lang-toggle-btn" aria-label="Cambiar idioma / Switch language" title="Cambiar idioma / Switch language">
-          🌐 <span id="lang-label">English</span>
+        <!-- 1. MANUAL Y FUENTES (RESALTADO PARA ORIENTAR AL USUARIO) -->
+        <button type="button" class="btn btn-highlight btn-sm" id="open-info-btn" aria-haspopup="dialog">
+          <span id="btn-guide-text">📖 Manual y Fuentes</span>
         </button>
 
+        <!-- 2. GATES DE SEGURIDAD -->
         <button type="button" class="btn btn-secondary btn-sm" id="open-gates-btn" aria-haspopup="dialog">
           <span id="btn-gates-text">🛡️ Gates de Seguridad</span>
         </button>
-        <button type="button" class="btn btn-secondary btn-sm" id="open-info-btn" aria-haspopup="dialog">
-          <span id="btn-guide-text">📖 Manual y Fuentes</span>
+
+        <!-- 3. PROGRESS BACKUP (RESPALDO DE PROGRESO) -->
+        <button type="button" class="btn btn-secondary btn-sm" id="export-progress-btn" title="Descargar copia de seguridad / Progress backup">
+          <span id="btn-export-text">💾 Copia de Progreso</span>
         </button>
-        <button type="button" class="btn btn-secondary btn-sm" id="export-progress-btn" title="Descargar copia de seguridad / Download backup">
-          <span id="btn-export-text">💾 Exportar</span>
+
+        <!-- 4. SELECTOR DE IDIOMA (AL FINAL, DEFAULT ESPAÑOL, OFRECE INGLÉS) -->
+        <button type="button" class="btn btn-lang btn-sm" id="lang-toggle-btn" aria-label="Switch to English" title="Switch to English">
+          🌐 <span id="lang-label">English</span>
         </button>
       </div>
     </div>
