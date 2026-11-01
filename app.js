@@ -285,11 +285,7 @@
       btn.dataset.day = d.day;
 
       btn.innerHTML = `
-        <span class="day-pill-num">${t("pill_prefix")}${String(d.day).padStart(2, "0")}</span>
-        <div class="day-pill-indicators">
-          ${isClosed ? '<span class="day-pill-check" aria-hidden="true">✓</span>' : ""}
-          ${isGateDay ? '<span class="day-pill-gate" title="Gate de Seguridad" aria-hidden="true">🛡️</span>' : ""}
-        </div>
+        <span class="day-pill-num">${t("pill_prefix")}${String(d.day).padStart(2, "0")}</span>${isClosed ? '<span class="day-pill-check" aria-hidden="true">✓</span>' : ""}${isGateDay && !isClosed ? '<span class="day-pill-gate" title="Gate de Seguridad" aria-hidden="true">🛡️</span>' : ""}
       `;
 
       btn.addEventListener("click", () => {
